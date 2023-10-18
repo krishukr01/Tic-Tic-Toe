@@ -7,13 +7,19 @@ import {
   ModalContent,
   ModalHeader,
   ModalCloseButton,
-  ModalBody,
   ModalFooter,
   Text,
 } from "@chakra-ui/react";
+import { useEffect } from "react";
 
-const CustomModal = () => {
+const CustomModal = ({ Winner, handleSquaresReset }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    if (Winner) {
+      onOpen();
+    }
+  }, [Winner]);
   return (
     <>
       <Modal isCentered isOpen={isOpen} onClose={onClose}>
@@ -24,13 +30,19 @@ const CustomModal = () => {
           backdropBlur="2px"
         />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>
+            <Text as="mark">{`Hurray! ${Winner} won the match`}</Text>
+          </ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            <Text>Custom backdrop filters!</Text>
-          </ModalBody>
           <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
+            <Button
+              onClick={() => {
+                onClose();
+                handleSquaresReset();
+              }}
+            >
+              Reset
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

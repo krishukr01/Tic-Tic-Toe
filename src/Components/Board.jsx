@@ -1,11 +1,8 @@
 import Square from "./Square/";
-import useSquares from "../hooks/useSquares";
 
 import { Button } from "@chakra-ui/react";
 
-const Board = () => {
-  const [squares, handleClick, handleSquaresReset, status] = useSquares();
-
+const Board = ({ squares, handleClick, handleSquaresReset, status }) => {
   return (
     <div>
       <div className="status-container">
