@@ -1,7 +1,10 @@
-import Board from "./Components/Board";
+import Board from "./components/Board";
+import CustomModal from "./components/CustomModal";
+
 function App() {
   return (
     <div>
+      <CustomModal />
       <Board />
     </div>
   );
