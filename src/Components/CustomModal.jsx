@@ -41,7 +41,7 @@ const CustomModal = ({ Winner, handleSquaresReset }) => {
                 handleSquaresReset();
               }}
             >
-              Reset
+              Play again
             </Button>
           </ModalFooter>
         </ModalContent>
