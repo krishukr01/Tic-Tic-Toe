@@ -15,8 +15,8 @@
 }
 
 .container {
-  width: 25rem;
-  height: 40rem;
+  width: 20rem;
+  height: max-content;
   height: max-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -30,8 +30,9 @@
 .square-btn {
   padding: 1rem;
   font-size: 3.5rem;
-  height: 9rem;
+  height: 7rem;
   font-weight: bolder;
   outline: none;
   border: 0.5px solid #edf2f7;
+  text-align: center;
 }

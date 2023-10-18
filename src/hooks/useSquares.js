@@ -23,6 +23,7 @@ const useSquares = () => {
 
   //Event handler : to reset the squares
   const handleSquaresReset = () => {
+    window.location.reload(true);
     setSquares(Array(9).fill(null));
     setXIsNext(true);
     localStorage.removeItem("squares");
