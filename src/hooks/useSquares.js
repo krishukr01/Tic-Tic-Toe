@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import calculateWinner from "../utils/calculateWinner";
 import isGameTie from "../utils/isGameTie";
-
+import isGameStarted from "../utils/isGameStarted";
 const useSquares = () => {
   const [squares, setSquares] = useState(
     () => JSON.parse(localStorage.getItem("squares")) || Array(9).fill(null)
@@ -34,6 +34,8 @@ const useSquares = () => {
     ? `Winner: ${Winner}`
     : isGameTie(squares)
     ? `Match is Tie`
+    : isGameStarted(squares)
+    ? "Start The Game"
     : `Next Player is ${xIsNext ? "X" : "O"}`;
 
   return [squares, handleClick, handleSquaresReset, status, Winner];

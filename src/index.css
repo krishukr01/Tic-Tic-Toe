@@ -15,7 +15,8 @@
 }
 
 .container {
-  width: 20rem;
+  width: 25rem;
+  height: 40rem;
   height: max-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -29,15 +30,8 @@
 .square-btn {
   padding: 1rem;
   font-size: 3.5rem;
-  height: 7rem;
+  height: 9rem;
   font-weight: bolder;
   outline: none;
   border: 0.5px solid #edf2f7;
-}
-.reset-btn {
-  padding: 0.4rem 1.3rem;
-  background-color: #1a202c;
-  color: #edf2f7;
-  border: 0.2px solid #edf2f7;
-  border-radius: 3px;
 }

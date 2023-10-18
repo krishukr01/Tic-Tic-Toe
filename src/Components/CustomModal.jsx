@@ -26,8 +26,8 @@ const CustomModal = ({ Winner, handleSquaresReset }) => {
         <ModalOverlay
           bg="none"
           backdropFilter="auto"
-          backdropInvert="80%"
-          backdropBlur="2px"
+          backdropInvert="90%"
+          backdropBlur="1px"
         />
         <ModalContent>
           <ModalHeader>
